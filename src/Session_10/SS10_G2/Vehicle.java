@@ -4,7 +4,7 @@ public class Vehicle {
     protected double speed = 0;
 
     public double accelerate() {
-        return speed;
+        return this.speed;
     }
     public double accelerate(double speed) {
         return this.speed;
