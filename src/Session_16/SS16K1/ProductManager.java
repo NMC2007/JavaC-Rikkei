@@ -27,13 +27,12 @@ public class ProductManager implements Manager<Product> {
     @Override
     public void totalPriceProduct() {
 
-        double total = 0;
+        double total = productMap.values()
+                .stream()
+                .mapToDouble(Product::getPrice)
+                .sum();
 
-        for (Product product : productMap.values()) {
-            total += product.getPrice();
-        }
-
-        System.out.println("Tổng giá trị toàn bộ hàng: " + total);
+        System.out.println("Tổng giá trị toàn bộ sản phẩm: " + total);
     }
 
     @Override

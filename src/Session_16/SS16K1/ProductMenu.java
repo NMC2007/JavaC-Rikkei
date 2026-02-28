@@ -155,9 +155,7 @@ private static void filterByPrice(Scanner sc) {
             System.out.println("---------------------------------------------------------------");
             System.out.printf("| %-10s | %-25s | %-18s |\n", "ID", "Tên sản phẩm", "Giá");
             System.out.println("---------------------------------------------------------------");
-            for (Product product : ProductsList.values()) {
-                product.displayProduct();
-            }
+            ProductsList.values().forEach(Product::displayProduct);
             System.out.println("---------------------------------------------------------------");
         }
     }
