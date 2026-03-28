@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="postgres@localhost">
-  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.53">
+  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.54">
     <root id="1">
       <DateStyle>dmy</DateStyle>
       <Grants>1||-9223372036854775808|c|G
@@ -11,9 +11,8 @@
 4||10|c|G
 4||10|C|G
 4||10|T|G</Grants>
-      <IntrospectionStateNumber>2417</IntrospectionStateNumber>
       <ServerVersion>18.1</ServerVersion>
-      <StartupTime>1772430868</StartupTime>
+      <StartupTime>1772506801</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -810,7 +809,6 @@ false Zulu
 14860||10|C|G
 14860||-9223372036854775808|U|G
 14860||10|U|G</Grants>
-      <IntrospectionStateNumber>2417</IntrospectionStateNumber>
       <ObjectId>5</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -1010,56 +1008,56 @@ false Zulu
       <ObjectId>19427</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
-    <role id="52" parent="1" name="pg_checkpoint">
-      <ObjectId>4544</ObjectId>
-    </role>
-    <role id="53" parent="1" name="pg_create_subscription">
-      <ObjectId>6304</ObjectId>
-    </role>
-    <role id="54" parent="1" name="pg_database_owner">
+    <role id="52" parent="1" name="pg_database_owner">
       <ObjectId>6171</ObjectId>
     </role>
-    <role id="55" parent="1" name="pg_execute_server_program">
-      <ObjectId>4571</ObjectId>
+    <role id="53" parent="1" name="pg_read_all_data">
+      <ObjectId>6181</ObjectId>
     </role>
-    <role id="56" parent="1" name="pg_maintain">
-      <ObjectId>6337</ObjectId>
+    <role id="54" parent="1" name="pg_write_all_data">
+      <ObjectId>6182</ObjectId>
     </role>
-    <role id="57" parent="1" name="pg_monitor">
+    <role id="55" parent="1" name="pg_monitor">
       <ObjectId>3373</ObjectId>
       <RoleGrants>3374
 3375
 3377</RoleGrants>
     </role>
-    <role id="58" parent="1" name="pg_read_all_data">
-      <ObjectId>6181</ObjectId>
-    </role>
-    <role id="59" parent="1" name="pg_read_all_settings">
+    <role id="56" parent="1" name="pg_read_all_settings">
       <ObjectId>3374</ObjectId>
     </role>
-    <role id="60" parent="1" name="pg_read_all_stats">
+    <role id="57" parent="1" name="pg_read_all_stats">
       <ObjectId>3375</ObjectId>
     </role>
-    <role id="61" parent="1" name="pg_read_server_files">
+    <role id="58" parent="1" name="pg_stat_scan_tables">
+      <ObjectId>3377</ObjectId>
+    </role>
+    <role id="59" parent="1" name="pg_read_server_files">
       <ObjectId>4569</ObjectId>
     </role>
-    <role id="62" parent="1" name="pg_signal_autovacuum_worker">
-      <ObjectId>6392</ObjectId>
+    <role id="60" parent="1" name="pg_write_server_files">
+      <ObjectId>4570</ObjectId>
     </role>
-    <role id="63" parent="1" name="pg_signal_backend">
+    <role id="61" parent="1" name="pg_execute_server_program">
+      <ObjectId>4571</ObjectId>
+    </role>
+    <role id="62" parent="1" name="pg_signal_backend">
       <ObjectId>4200</ObjectId>
     </role>
-    <role id="64" parent="1" name="pg_stat_scan_tables">
-      <ObjectId>3377</ObjectId>
+    <role id="63" parent="1" name="pg_checkpoint">
+      <ObjectId>4544</ObjectId>
+    </role>
+    <role id="64" parent="1" name="pg_maintain">
+      <ObjectId>6337</ObjectId>
     </role>
     <role id="65" parent="1" name="pg_use_reserved_connections">
       <ObjectId>4550</ObjectId>
     </role>
-    <role id="66" parent="1" name="pg_write_all_data">
-      <ObjectId>6182</ObjectId>
+    <role id="66" parent="1" name="pg_create_subscription">
+      <ObjectId>6304</ObjectId>
     </role>
-    <role id="67" parent="1" name="pg_write_server_files">
-      <ObjectId>4570</ObjectId>
+    <role id="67" parent="1" name="pg_signal_autovacuum_worker">
+      <ObjectId>6392</ObjectId>
     </role>
     <role id="68" parent="1" name="postgres">
       <BypassRls>1</BypassRls>
@@ -4522,9 +4520,6 @@ false Zulu
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <LastIntrospectionL1Xid>2417</LastIntrospectionL1Xid>
-      <LastIntrospectionL2Xid>2417</LastIntrospectionL2Xid>
-      <LastIntrospectionL3Xid>2417</LastIntrospectionL3Xid>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
       <LastIntrospectionLocalTimestamp>2026-03-02.07:52:15</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
@@ -4560,46 +4555,106 @@ false Zulu
       <StoredType>integer|0s</StoredType>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <table id="324" parent="320" name="movies">
+    <table id="324" parent="320" name="books">
+      <DetailsLevel>2</DetailsLevel>
+      <ObjectId>19598</ObjectId>
+      <StateNumber>2429</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <table id="325" parent="320" name="movies">
       <DetailsLevel>2</DetailsLevel>
       <ObjectId>19584</ObjectId>
       <StateNumber>2416</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="325" parent="320" name="products">
+    <table id="326" parent="320" name="products">
       <DetailsLevel>2</DetailsLevel>
       <ObjectId>19571</ObjectId>
       <StateNumber>2410</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="326" parent="320" name="student">
+    <table id="327" parent="320" name="student">
       <DetailsLevel>2</DetailsLevel>
       <ObjectId>19562</ObjectId>
       <StateNumber>2401</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <argument id="327" parent="321" name="name_in">
+    <argument id="328" parent="321" name="name_in">
       <Position>1</Position>
       <StoredType>varchar|0s</StoredType>
     </argument>
-    <argument id="328" parent="321" name="birthday_in">
+    <argument id="329" parent="321" name="birthday_in">
       <Position>2</Position>
       <StoredType>date|0s</StoredType>
     </argument>
-    <argument id="329" parent="321" name="sex_in">
+    <argument id="330" parent="321" name="sex_in">
       <Position>3</Position>
       <StoredType>boolean|0s</StoredType>
     </argument>
-    <check id="330" parent="324" name="movies_year_check">
+    <column id="331" parent="324" name="id">
+      <DefaultExpression>nextval(&apos;books_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>2429</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <SequenceId>19597</SequenceId>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="332" parent="324" name="title">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>2429</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="333" parent="324" name="author">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StateNumber>2429</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="334" parent="324" name="publisher_year">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StateNumber>2429</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="335" parent="324" name="price">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StateNumber>2429</StateNumber>
+      <StoredType>numeric(10,2 digit)|0s</StoredType>
+      <TypeId>1700</TypeId>
+    </column>
+    <index id="336" parent="324" name="books_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>19609</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>2429</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="337" parent="324" name="books_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>19610</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>2429</StateNumber>
+      <UnderlyingIndexId>19609</UnderlyingIndexId>
+    </key>
+    <check id="338" parent="325" name="movies_year_check">
       <ColNames>year</ColNames>
       <ObjectId>19588</ObjectId>
       <Predicate>year &gt;= 1800</Predicate>
       <StateNumber>2416</StateNumber>
     </check>
-    <column id="331" parent="324" name="id">
+    <column id="339" parent="325" name="id">
       <DefaultExpression>nextval(&apos;movies_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -4608,28 +4663,28 @@ false Zulu
       <SequenceId>19583</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="332" parent="324" name="title">
+    <column id="340" parent="325" name="title">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>2416</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="333" parent="324" name="director">
+    <column id="341" parent="325" name="director">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>2416</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="334" parent="324" name="year">
+    <column id="342" parent="325" name="year">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>2416</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <index id="335" parent="324" name="movies_pkey">
+    <index id="343" parent="325" name="movies_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>19595</ObjectId>
@@ -4638,62 +4693,62 @@ false Zulu
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="336" parent="324" name="movies_pkey">
+    <key id="344" parent="325" name="movies_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>19596</ObjectId>
       <Primary>1</Primary>
       <StateNumber>2416</StateNumber>
       <UnderlyingIndexId>19595</UnderlyingIndexId>
     </key>
-    <check id="337" parent="325" name="products_quantity_check">
+    <check id="345" parent="326" name="products_quantity_check">
       <ColNames>quantity</ColNames>
       <ObjectId>19577</ObjectId>
       <Predicate>quantity &gt;= 0</Predicate>
       <StateNumber>2410</StateNumber>
     </check>
-    <column id="338" parent="325" name="id">
+    <column id="346" parent="326" name="id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>2410</StateNumber>
       <StoredType>varchar(50)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="339" parent="325" name="name">
+    <column id="347" parent="326" name="name">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>2410</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="340" parent="325" name="price">
+    <column id="348" parent="326" name="price">
       <DefaultExpression>0.0</DefaultExpression>
       <Position>3</Position>
       <StateNumber>2410</StateNumber>
       <StoredType>numeric(12,2 digit)|0s</StoredType>
       <TypeId>1700</TypeId>
     </column>
-    <column id="341" parent="325" name="quantity">
+    <column id="349" parent="326" name="quantity">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>2410</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="342" parent="325" name="create_at">
+    <column id="350" parent="326" name="create_at">
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <Position>5</Position>
       <StateNumber>2410</StateNumber>
       <StoredType>timestamp|0s</StoredType>
       <TypeId>1114</TypeId>
     </column>
-    <column id="343" parent="325" name="update_at">
+    <column id="351" parent="326" name="update_at">
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <Position>6</Position>
       <StateNumber>2410</StateNumber>
       <StoredType>timestamp|0s</StoredType>
       <TypeId>1114</TypeId>
     </column>
-    <index id="344" parent="325" name="products_pkey">
+    <index id="352" parent="326" name="products_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>19581</ObjectId>
@@ -4705,14 +4760,14 @@ false Zulu
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="345" parent="325" name="products_pkey">
+    <key id="353" parent="326" name="products_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>19582</ObjectId>
       <Primary>1</Primary>
       <StateNumber>2410</StateNumber>
       <UnderlyingIndexId>19581</UnderlyingIndexId>
     </key>
-    <column id="346" parent="326" name="id">
+    <column id="354" parent="327" name="id">
       <DefaultExpression>nextval(&apos;student_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -4721,26 +4776,26 @@ false Zulu
       <SequenceId>19561</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="347" parent="326" name="name">
+    <column id="355" parent="327" name="name">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>2401</StateNumber>
       <StoredType>varchar(50)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="348" parent="326" name="birthday">
+    <column id="356" parent="327" name="birthday">
       <Position>3</Position>
       <StateNumber>2401</StateNumber>
       <StoredType>date|0s</StoredType>
       <TypeId>1082</TypeId>
     </column>
-    <column id="349" parent="326" name="sex">
+    <column id="357" parent="327" name="sex">
       <Position>4</Position>
       <StateNumber>2401</StateNumber>
       <StoredType>boolean|0s</StoredType>
       <TypeId>16</TypeId>
     </column>
-    <index id="350" parent="326" name="student_pkey">
+    <index id="358" parent="327" name="student_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>19568</ObjectId>
@@ -4749,7 +4804,7 @@ false Zulu
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="351" parent="326" name="student_pkey">
+    <key id="359" parent="327" name="student_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>19569</ObjectId>
       <Primary>1</Primary>
